@@ -73,18 +73,21 @@ body {
   box-shadow: 0px 15px 40px 0px #f9d58040;
   background-color: var(--highlight-color);
   font-size: 19px;
-  letter-spacing: 1px;
+  transition: 0.3s;
+  &:hover {
+    background-color: #f9a755;
+  }
 }
 .sectionHeading {
   text-align: center;
-  max-width: 500px;
+  max-width: 31.25rem;
   margin-inline: auto;
   margin-bottom: 5rem;
   h2 {
     color: var(--text-color);
     font-weight: 700;
     font-size: 2.25rem;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
   }
   p {
     color: var(--desc-color);
@@ -127,11 +130,11 @@ nav ul {
     transition: 0.2s;
     position: relative;
     color: var(--text-color);
-    min-width: 50px;
     &::before {
       content: "";
       position: absolute;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       bottom: -3px;
       width: 0;
       height: 3px;
@@ -215,12 +218,14 @@ nav ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  @media (max-width: 991px) {
+    flex-direction: column;
+  }
 }
 .worksFeatures > div {
   flex-basis: 28%;
   text-align: center;
-  min-width: 250px;
-  margin-bottom: 8rem;
+  min-width: 15.625rem;
   h3 {
     color: var(--text-color);
     font-weight: 700;
@@ -232,8 +237,8 @@ nav ul {
     line-height: 1.5;
   }
   .icon {
-    width: 88px;
-    height: 88px;
+    width: 5.5rem;
+    height: 5.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -244,6 +249,7 @@ nav ul {
   &.order,
   &.payment {
     transform: translateY(-50px);
+    margin-top: 8rem;
   }
   &.order .icon {
     background-color: #335dff;
@@ -318,10 +324,9 @@ nav ul {
           }
         }
       }
-      &:hover{
-        border: 1px solid #F9A755;
-        box-shadow: 0px 30px 30px 13px #C6C6C640;
-
+      &:hover {
+        border: 1px solid #f9a755;
+        box-shadow: 0px 30px 30px 13px #c6c6c640;
       }
     }
   }
@@ -334,20 +339,19 @@ nav ul {
       justify-content: center;
       margin-right: 0.5rem;
       cursor: pointer;
-      width: 40px;
-      height:40px;
+      width: 2.5rem;
+      height: 2.5rem;
       border-radius: 50%;
       border: 1px solid #70707033;
       text-align: center;
-      &.active{
+      &.active {
         background-color: var(--highlight-color);
         color: white;
-      
       }
-      svg{
+      svg {
         width: 16px;
       }
-      &:first-child{
+      &:first-child {
         transform: rotate(180deg);
       }
     }
@@ -356,56 +360,55 @@ nav ul {
 
 /* == END SERVICES SECTION == */
 /* == START FOOTER  == */
-footer{
+footer {
   padding-block: 5rem 0rem;
   background-color: #232233;
   color: white;
-  .container{
+  .container {
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
-    > div{
+    > div {
       flex: 1;
-      min-width: 200px;
+      min-width: 12.5rem;
     }
     .logo-desc {
-      h3{
+      h3 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
       }
-      p{
+      p {
         line-height: 1.5;
         color: #8a8a8a;
       }
-      .socials{
+      .socials {
         display: flex;
         justify-content: space-evenly;
         margin-block: 1rem;
       }
     }
-    .links{
-      h3{
+    .links {
+      h3 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
       }
-      ul{
-        li{
+      ul {
+        li {
           margin-block: 0.5rem;
-          a{
+          a {
             color: #8a8a8a;
             transition: 0.2s;
-            &:hover{
+            &:hover {
               color: white;
             }
           }
         }
       }
-    
     }
   }
-  .copyright{
+  .copyright {
     padding-top: 1rem;
-    border-top:2px solid #c0c0c0;
+    border-top: 2px solid #c0c0c0;
     text-align: center;
     padding-block: 1rem;
   }
